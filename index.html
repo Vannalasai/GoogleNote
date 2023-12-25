@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Keep Note</title>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Google Keep Note</h1>
+      <button id="deleteall">Delete All Notes</button>
+    </div>
+
+    <section id="notes">
+      
+    </section>
+
+    <hr>
+
+    <section id="footer">
+      <h1>Create New Note</h1>
+      <div id="createnote">
+        <input id="title" type="text" placeholder="Title" required>
+        <textarea placeholder="Message" name="message" id="content" cols="30" rows="10" required></textarea>
+        <button id="createButton">Submit</button>
+      </div>
+    </section>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;400;700&family=Ubuntu:wght@300;400;500&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+body{
+  background: #C5CAE9;
+  width: 99vw;
+  height: 100vh;
+}
+
+.heading{
+  padding: 1rem;
+  margin: 0.8rem;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#deleteall{
+  background: #EEEEEE;
+  color: #E91E63;
+  padding: 0.8rem;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#notes{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0.5rem;
+  margin: 0.4rem 0.8rem;
+}
+
+.note{
+  background: #EEEEEE;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  margin: 0.8rem;
+}
+
+#delete{
+  background: #66BB6A;
+  color: #212121;
+  padding: 0.4rem 0.9rem;
+  border-radius: 10px;
+  margin: 0.3rem 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#footer{
+  padding: 1rem;
+}
+
+#footer h1{
+  padding: 0 1rem;
+}
+
+#createnote{
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  padding: 1rem;
+  margin: 1rem;
+  background: white;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+#title{
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0.3rem;
+  outline: none;
+}
+
+#content{
+  border: none;
+  padding: 0.3rem;
+  outline: none;
+}
+
+#createButton{
+  width: 7vw;
+  background: #78909C;
+  color: #FAFAFA;
+  padding: 0.5rem;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+</style>
